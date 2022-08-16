@@ -1,59 +1,58 @@
 <template>
-  <sidebar-menu :menu="menu" />
+  <sidebar-menu :menu="menu" :theme="selectedTheme" :show-one-child="true" />
   Hello
 </template>
 
 <script>
+import { h, markRaw } from "vue";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
+const separator = {
+  template: '<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">',
+};
+
+const faIcon = (props) => {
+  return {
+    element: markRaw({
+      render: () => h("div", [h(FontAwesomeIcon, { size: "lg", ...props })]),
+    }),
+  };
+};
+
 export default {
+  name: "App",
   data() {
     return {
       menu: [
         {
-          header: "Il jo Yoo",
+          header: "About Me",
           hiddenOnCollapse: true,
         },
         {
-          href: "/about",
-          title: "About Me",
-          // icon: faIcon({ icon: "fa-solid fa-list-ul" }),
+          href: "/education",
+          title: "Education",
+          icon: faIcon({ icon: "fas fa-graduation-cap" }),
+        },
+        {
+          title: "Experience",
+          icon: faIcon({ icon: "fas fa-briefcase" }),
           child: [
             {
-              href: "/about/education",
-              title: "Education",
-            },
-            {
-              href: "/about/expreience",
-              title: "Experience",
-            },
-            {
-              href: "/about/skill",
-              title: "Skill",
+              href: "/experience/project1",
+              title: "project1",
             },
           ],
         },
         {
-          href: "/portfolio",
-          title: "Portfolio",
-          child: [
-            {
-              href: "/portfolio/glt",
-              title: "High-Frequency Trading",
-            },
-            {
-              href: "/portfolio/finance",
-              title: "Corporate Finance",
-            },
-            {
-              href: "/portfolio/dna",
-              title: "Data & Analytics",
-            },
-            {
-              href: "/portfolio/mlengineering",
-              title: "ML Engineering",
-            },
-          ],
+          href: "/skill",
+          title: "Skill",
+          icon: faIcon({ icon: "fas fa-gear" }),
+        },
+        {
+          component: markRaw(separator),
         },
       ],
+      selectedTheme: "white-theme",
     };
   },
 };
