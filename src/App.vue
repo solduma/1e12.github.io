@@ -1,5 +1,5 @@
 <template>
-  <sidebar-menu :menu="menu" :theme="selectedTheme" :show-one-child="true" />
+  <sidebar-menu v-model:collapsed="collapsed" :menu="menu" :theme="selectedTheme" :show-one-child="true"/>
   Hello
 </template>
 
@@ -52,31 +52,66 @@ export default {
           component: markRaw(separator),
         },
       ],
+      collapsed: false,
       selectedTheme: "white-theme",
+      isOnMobile: false,
     };
+  },
+  mounted() {
+    this.onResize();
+    window.addEventListener("resize", this.onResize);
+  },
+  methods: {
+    onResize() {
+      if (window.innerWidth <= 767) {
+        this.isOnMobile = true;
+        this.collapsed = true;
+      } else {
+        this.isOnMobile = false;
+        this.collapsed = false;
+      }
+    },
   },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600");
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  background-color: #f2f4f7;
+  color: #262626;
+}
+#demo {
+  padding-left: 290px;
+  transition: 0.3s ease;
+}
+#demo.collapsed {
+  padding-left: 65px;
+}
+#demo.onmobile {
+  padding-left: 65px;
+}
+.sidebar-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 900;
+}
+.demo {
+  padding: 50px;
+}
+.container {
+  max-width: 900px;
 }
 </style>
