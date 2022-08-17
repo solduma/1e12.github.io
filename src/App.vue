@@ -1,117 +1,130 @@
 <template>
-  <sidebar-menu v-model:collapsed="collapsed" :menu="menu" :theme="selectedTheme" :show-one-child="true"/>
-  Hello
+  <picture>
+    <source srcset="./assets/img/background.webp" type="image/webp" />
+  </picture>
+  <header>
+    <h1>
+      <a href="/"><img src="./assets/img/logo.png" alt="Main Logo" /></a>
+    </h1>
+    <nav>
+      <h1 class="hide">This is a nav area</h1>
+      <router-link to="about">About Me</router-link>
+      <router-link to="project">Project</router-link>
+      <a href="http://momo.town">Momo</a>
+    </nav>
+  </header>
+  <div id="wrapper">
+    <h1 class="hide">This is a wrapper area</h1>
+    <main>
+      <h1 class="hide">This is a main area</h1>
+      <router-view />
+    </main>
+  </div>
 </template>
 
 <script>
 import { h, markRaw } from "vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-const separator = {
-  template: '<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">',
-};
-
-const faIcon = (props) => {
-  return {
-    element: markRaw({
-      render: () => h("div", [h(FontAwesomeIcon, { size: "lg", ...props })]),
-    }),
-  };
-};
-
 export default {
   name: "App",
   data() {
-    return {
-      menu: [
-        {
-          header: "About Me",
-          hiddenOnCollapse: true,
-        },
-        {
-          href: "/education",
-          title: "Education",
-          icon: faIcon({ icon: "fas fa-graduation-cap" }),
-        },
-        {
-          title: "Experience",
-          icon: faIcon({ icon: "fas fa-briefcase" }),
-          child: [
-            {
-              href: "/experience/project1",
-              title: "project1",
-            },
-          ],
-        },
-        {
-          href: "/skill",
-          title: "Skill",
-          icon: faIcon({ icon: "fas fa-gear" }),
-        },
-        {
-          component: markRaw(separator),
-        },
-      ],
-      collapsed: false,
-      selectedTheme: "white-theme",
-      isOnMobile: false,
-    };
-  },
-  mounted() {
-    this.onResize();
-    window.addEventListener("resize", this.onResize);
-  },
-  methods: {
-    onResize() {
-      if (window.innerWidth <= 767) {
-        this.isOnMobile = true;
-        this.collapsed = true;
-      } else {
-        this.isOnMobile = false;
-        this.collapsed = false;
-      }
-    },
+    return {};
   },
 };
 </script>
 
 <style lang="scss">
+@import "./assets/css/variables.scss";
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600");
-body,
-html {
+@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
+
+body {
+  font-family: Roboto, Noto Sans, sans-serif;
+  margin: 0;
+  font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+b,
+strong {
+  margin: 0;
+}
+ol,
+ul,
+li,
+dl,
+dt,
+dd {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
-body {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 18px;
-  background-color: #f2f4f7;
-  color: #262626;
-}
-#demo {
-  padding-left: 290px;
-  transition: 0.3s ease;
-}
-#demo.collapsed {
-  padding-left: 65px;
-}
-#demo.onmobile {
-  padding-left: 65px;
-}
-.sidebar-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
+.hide {
+  position: absolute;
   left: 0;
-  background-color: #000;
-  opacity: 0.5;
-  z-index: 900;
+  top: 0;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  opacity: 0;
 }
-.demo {
-  padding: 50px;
+
+header {
+  display: flex;
+  flex-flow: row-wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  top: 0;
+  background: $BumbleBeeYellow;
+  margin: 0px;
+  box-shadow: 0px 1px 2px rgba(141, 141, 141, 0.5);
 }
-.container {
-  max-width: 900px;
+
+header a {
+  display: flex;
+  flex-flow: row-wrap;
+  align-items: center;
+}
+
+header img {
+  width: 32px;
+  height: 32px;
+  margin: 4px;
+}
+
+nav {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-right: 20px;
+  flex-basis: 250px;
+}
+nav a {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  text-decoration: none;
+  color: black;
+}
+.router-link-active {
+  color: white;
+  text-shadow: -1px 0 #ffc72b, 0 1px #ffc72b, 1px 0 #ffc72b, 0 -1px #ffc72b;
+}
+#wrapper {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+main {
+  flex-basis: 940px;
 }
 </style>
