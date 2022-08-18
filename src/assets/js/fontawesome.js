@@ -2,6 +2,9 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 
 import {
   faEnvelope,
+  faUser,
+  faBriefcase,
+  faChartColumn,
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
@@ -17,4 +20,7 @@ library.add(
   faEnvelope,
   faGithub,
   faLinkedin,
+  faUser,
+  faBriefcase,
+  faChartColumn,
 )

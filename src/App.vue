@@ -1,19 +1,16 @@
 <template>
-  <picture>
-    <source srcset="./assets/img/background.webp" type="image/webp" />
-  </picture>
-    <header>
-      <h1>
-        <a href="/"><img src="./assets/img/logo.png" alt="Main Logo" /></a>
-      </h1>
-      <nav>
-        <h2 class="hide">This is a nav area</h2>
-        <router-link to="about">About Me</router-link>
-        <router-link to="project">Past Projects</router-link>
-        <router-link to="blog">ML Stuffs</router-link>
-        <router-link to="momo">Momo?</router-link>
-      </nav>
-    </header>
+  <header>
+    <h1>
+      <a href="/"><img src="./assets/img/logo.png" alt="Main Logo" /></a>
+    </h1>
+    <nav>
+      <h2 class="hide">This is a nav area</h2>
+      <router-link to="about"><div v-if="isOnMobile"><font-awesome-icon icon="fa-solid fa-user" size="lg" /></div><div v-else>About Me</div></router-link>
+      <router-link to="project"><div v-if="isOnMobile"><font-awesome-icon icon="fa-solid fa-briefcase" size="lg" /></div><div v-else>Past Projects</div></router-link>
+      <router-link to="blog"><div v-if="isOnMobile"><font-awesome-icon icon="fa-solid fa-chart-column" size="lg" /></div><div v-else>ML Stuffs</div></router-link>
+      <router-link to="momo"><div v-if="isOnMobile"><img src="./assets/img/momo.png"></div><div v-else>Momo?</div></router-link>
+    </nav>
+  </header>
   <div id="wrapper">
     <main>
       <h2 class="hide">This is a main area</h2>
@@ -23,10 +20,26 @@
 </template>
 
 <script>
+import { faTruckField } from "@fortawesome/free-solid-svg-icons";
 export default {
   name: "App",
   data() {
-    return {};
+    return {
+      isOnMobile: false,
+    };
+  },
+  mounted () {
+    this.onResize()
+    window.addEventListener('resize', this.onResize)
+  },
+  methods: {
+    onResize() {
+      if (window.innerWidth <= 767) {
+        this.isOnMobile = faTruckField;
+      } else {
+        this.isOnMobile = false;
+      }
+    },
   },
 };
 </script>
@@ -72,7 +85,6 @@ dd {
   opacity: 0;
 }
 
-
 header {
   position: fixed;
   display: flex;
@@ -100,12 +112,12 @@ header img {
 nav {
   display: flex;
   flex-flow: wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: stretch;
   margin-right: 20px;
-  flex-basis: 420px;
 }
 nav a {
+  margin: 0px 0px 0px 20px;
   font-size: 18px;
   font-weight: bold;
   line-height: 32 px;
@@ -131,8 +143,6 @@ nav a:last-child {
   z-index: 2;
 }
 
-
-
 main {
   flex-basis: 940px;
   padding: 40px 0px 0px 0px;
@@ -141,8 +151,8 @@ main {
 .viewWrapper {
   padding: 32px;
 }
-#wrapper h1{
-  position:flex;
+#wrapper h1 {
+  position: flex;
   justify-content: center;
   // align-items: stretch;
   top: 40px;
