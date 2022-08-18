@@ -2,30 +2,27 @@
   <picture>
     <source srcset="./assets/img/background.webp" type="image/webp" />
   </picture>
-  <header>
-    <h1>
-      <a href="/"><img src="./assets/img/logo.png" alt="Main Logo" /></a>
-    </h1>
-    <nav>
-      <h1 class="hide">This is a nav area</h1>
-      <router-link to="about">About Me</router-link>
-      <router-link to="project">Project</router-link>
-      <a href="http://momo.town">Momo</a>
-    </nav>
-  </header>
+    <header>
+      <h1>
+        <a href="/"><img src="./assets/img/logo.png" alt="Main Logo" /></a>
+      </h1>
+      <nav>
+        <h2 class="hide">This is a nav area</h2>
+        <router-link to="about">About Me</router-link>
+        <router-link to="project">Past Projects</router-link>
+        <router-link to="blog">ML Stuffs</router-link>
+        <router-link to="momo">Momo?</router-link>
+      </nav>
+    </header>
   <div id="wrapper">
-    <h1 class="hide">This is a wrapper area</h1>
     <main>
-      <h1 class="hide">This is a main area</h1>
+      <h2 class="hide">This is a main area</h2>
       <router-view />
     </main>
   </div>
 </template>
 
 <script>
-import { h, markRaw } from "vue";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-
 export default {
   name: "App",
   data() {
@@ -50,9 +47,7 @@ h3,
 h4,
 h5,
 h6,
-p {
-  margin: 0;
-}
+p,
 b,
 strong {
   margin: 0;
@@ -77,15 +72,17 @@ dd {
   opacity: 0;
 }
 
+
 header {
+  position: fixed;
   display: flex;
   flex-flow: row-wrap;
   justify-content: space-between;
   align-items: stretch;
   top: 0;
+  min-width: 100vw;
   background: $BumbleBeeYellow;
   margin: 0px;
-  box-shadow: 0px 1px 2px rgba(141, 141, 141, 0.5);
 }
 
 header a {
@@ -106,25 +103,55 @@ nav {
   justify-content: space-between;
   align-items: stretch;
   margin-right: 20px;
-  flex-basis: 250px;
+  flex-basis: 420px;
 }
 nav a {
   font-size: 18px;
   font-weight: bold;
-  line-height: 30px;
+  line-height: 32 px;
   text-decoration: none;
   color: black;
 }
+
+nav a:last-child {
+  color: $MomoGrotto;
+}
+
 .router-link-active {
   color: white;
   text-shadow: -1px 0 #ffc72b, 0 1px #ffc72b, 1px 0 #ffc72b, 0 -1px #ffc72b;
 }
+
 #wrapper {
   display: flex;
   flex-flow: row;
   justify-content: center;
+  align-items: stretch;
+  min-height: 100vh;
+  z-index: 2;
 }
+
+
+
 main {
   flex-basis: 940px;
+  padding: 40px 0px 0px 0px;
+  box-shadow: 0px 0px 2px rgba(141, 141, 141, 0.5);
+}
+.viewWrapper {
+  padding: 32px;
+}
+#wrapper h1{
+  position:flex;
+  justify-content: center;
+  // align-items: stretch;
+  top: 40px;
+  font-family: Leckerli One, sans-serif;
+  min-height: 100px;
+  min-width: 100%;
+  text-align: center;
+  font-size: 50px;
+  color: $BumbleBeeYellow;
+  text-shadow: -1px 0 #ffc72b, 0 1px #ffc72b, 1px 0 #ffc72b, 0 -1px #ffc72b;
 }
 </style>
