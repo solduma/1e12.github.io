@@ -5,9 +5,9 @@
       I'm a full time Senior Data Scientist, and a Co-Founder of
       <a href="https://momo.town">Momo</a>. <br />
       I write about Programming, Data Science, MLOps, and Web Development in a
-      Product Perspective. <br />
+      product perspective. <br />
+      All views are my own.<br />
       Feel free to contact me with anything via following channels. <br />
-      All views are my own.
     </p>
     <br />
     <div id="contacts">
