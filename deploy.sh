@@ -6,6 +6,7 @@ npm run build
 
 cd dist
 
+git config --global init.defaultBranch main
 git config --global user.email "iljo.joseph.yoo@gmail.com"
 git config --global user.name "solduma"
 git init
