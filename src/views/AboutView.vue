@@ -1,7 +1,7 @@
 <template>
   <div class="viewWrapper">
     <h2>Education</h2>
-    <div class="aboutWrapper">
+    <div class="aboutWrapper" :style="style">
       <a href="/"
         ><img src="../assets/img/chief.png" alt="Illinois Chief Logo"
       /></a>
@@ -17,7 +17,7 @@
     <hr />
     <br />
     <h2>Employment</h2>
-    <div class="aboutWrapper">
+    <div class="aboutWrapper" :style="style">
       <ul>
         <li>2021-Current</li>
       </ul>
@@ -27,7 +27,7 @@
         <li>Recommender System for Banner Ads on 3rd-Party Sites</li>
       </ul>
     </div>
-    <div class="aboutWrapper">
+    <div class="aboutWrapper" :style="style">
       <ul>
         <li>2017-2021</li>
       </ul>
@@ -44,7 +44,7 @@
         <li>Samsung Electronics – Semi-Realtime Dashboard for SCM</li>
       </ul>
     </div>
-    <div class="aboutWrapper">
+    <div class="aboutWrapper" :style="style">
       <ul>
         <li>2014-2017</li>
       </ul>
@@ -54,7 +54,7 @@
         <li>Development of Fair-value Monitoring System</li>
       </ul>
     </div>
-    <div class="aboutWrapper">
+    <div class="aboutWrapper" :style="style">
       <ul>
         <li>2012-2013</li>
       </ul>
@@ -67,7 +67,7 @@
     <hr />
     <br />
     <h2>Skills</h2>
-    <div class="skillWrapper">
+    <div class="skillWrapper" :style="style">
       <ul>
         <li><b>Languages</b></li>
       </ul>
@@ -110,7 +110,7 @@
         </li>
       </ul>
     </div>
-    <div class="skillWrapper">
+    <div class="skillWrapper" :style="style">
       <ul>
         <li><b>ML/DL</b></li>
       </ul>
@@ -159,7 +159,7 @@
         </li>
       </ul>
     </div>
-    <div class="skillWrapper">
+    <div class="skillWrapper" :style="style">
       <ul>
         <li><b>Visualization</b></li>
       </ul>
@@ -183,8 +183,8 @@
           />
         </li>
       </ul>
-      </div>
-    <div class="skillWrapper">
+    </div>
+    <div class="skillWrapper" :style="style">
       <ul>
         <li><b>WebDev</b></li>
       </ul>
@@ -215,7 +215,7 @@
         </li>
       </ul>
     </div>
-    <div class="skillWrapper">
+    <div class="skillWrapper" :style="style">
       <ul>
         <li><b>SQL</b></li>
       </ul>
@@ -224,6 +224,12 @@
           <img
             src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white&style=flat"
             alt="Postgres SQL Badge"
+          />
+        </li>
+        <li>
+          <img
+            src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white&style=flat"
+            alt="Oracle Badge"
           />
         </li>
         <li>
@@ -246,7 +252,7 @@
         </li>
       </ul>
     </div>
-    <div class="skillWrapper">
+    <div class="skillWrapper" :style="style">
       <ul>
         <li><b>NoSQL</b></li>
       </ul>
@@ -271,7 +277,7 @@
         </li>
       </ul>
     </div>
-    <div class="skillWrapper">
+    <div class="skillWrapper" :style="style">
       <ul>
         <li><b>CI/CD</b></li>
       </ul>
@@ -284,9 +290,9 @@
         </li>
       </ul>
     </div>
-    <div class="skillWrapper">
+    <div class="skillWrapper" :style="style">
       <ul>
-        <li><b>Etc</b></li>
+        <li><b>Etc.</b></li>
       </ul>
       <ul>
         <li>
@@ -346,37 +352,49 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "AboutView",
+  props: {
+    isOnMobile: [Boolean, Object],
+  },
+  computed: {
+    style () {
+      return 'display: ' + (this.isOnMobile ? 'block': 'flex');
+    }
+  },
 });
 </script>
 
 <style scoped lang="scss">
-hr {
-  margin-left: 0px;
+
+h2 {
+  height: 32px;
 }
 
-.aboutWrapper {
-  display: flex;
+.aboutWrapper,
+.skillWrapper {
   padding: 10px 0px;
+}
+
+.mobileView {
+  display: block;
 }
 
 .aboutWrapper > a > img,
 ul:first-child {
   width: 120px;
   margin-right: 20px;
-}
-
-.skillWrapper {
-  display: flex;
-  padding: 10px 0px;
+  font-weight: bold;
 }
 
 .skillWrapper > ul {
   display: flex;
-  flex-flow: row-wrap;
+  flex-flow: row wrap;
 }
 
-.skillWrapper > ul > li {
+ul > li {
+  display: flex;
   margin-right: 3px;
+  margin-bottom: 3px;
+  display: flex;
+  flex-flow: row wrap;
 }
 </style>

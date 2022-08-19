@@ -9,7 +9,8 @@
       All views are my own.<br />
       Feel free to contact me with anything via following channels. <br />
     </p>
-    <br />
+    <br>
+    <hr />
     <div id="contacts">
       <a href="https://github.com/solduma/"
         ><font-awesome-icon icon="fa-brands fa-github" size="2x"

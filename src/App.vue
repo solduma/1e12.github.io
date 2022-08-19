@@ -14,13 +14,12 @@
   <div id="wrapper">
     <main>
       <h2 class="hide">This is a main area</h2>
-      <router-view />
+      <router-view :isOnMobile="isOnMobile"/>
     </main>
   </div>
 </template>
 
 <script>
-import { faTruckField } from "@fortawesome/free-solid-svg-icons";
 export default {
   name: "App",
   data() {
@@ -35,7 +34,7 @@ export default {
   methods: {
     onResize() {
       if (window.innerWidth <= 767) {
-        this.isOnMobile = faTruckField;
+        this.isOnMobile = true;
       } else {
         this.isOnMobile = false;
       }
@@ -154,11 +153,9 @@ main {
 #wrapper h1 {
   position: flex;
   justify-content: center;
-  // align-items: stretch;
   top: 40px;
   font-family: Leckerli One, sans-serif;
   min-height: 100px;
-  min-width: 100%;
   text-align: center;
   font-size: 50px;
   color: $BumbleBeeYellow;
