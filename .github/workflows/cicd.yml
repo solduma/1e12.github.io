@@ -27,4 +27,4 @@ jobs:
           git init
           git add -A
           git commit -m 'deploy'
-          git push -f solduma:${{ secrets.GITHUB_TOKEN }}@github.com:solduma/solduma.github.io.git main:gh-pages
+          git push -f https://solduma:${{ secrets.GITHUB_TOKEN }}@github.com:solduma/solduma.github.io.git main:gh-pages
