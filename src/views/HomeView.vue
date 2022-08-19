@@ -2,7 +2,7 @@
   <div class="viewWrapper">
     <h1>Il Jo Yoo</h1>
     <p>
-      I'm a full time Senior Data Scientist, and a Co-Founder of
+      I'm a Senior Data Scientist at Hyundai Capital, and a Co-Founder of
       <a href="https://momo.town">Momo</a>. <br />
       I write about Programming, Data Science, MLOps, and Web Development in a
       product perspective. <br />
