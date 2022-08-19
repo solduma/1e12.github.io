@@ -1,2 +1,2 @@
 "use strict";(self["webpackChunkgithub_io_vue"]=self["webpackChunkgithub_io_vue"]||[]).push([[302],{7302:function(e,n,u){u.r(n),u.d(n,{default:function(){return s}});var i=u(3396);function t(e,n,u,t,r,a){return(0,i.wg)(),(0,i.iD)("h1",null,"This is a blog page")}var r=(0,i.aZ)({name:"BlogView",components:{}}),a=u(89);const o=(0,a.Z)(r,[["render",t]]);var s=o}}]);
-//# sourceMappingURL=302.42ae2311.js.map
+//# sourceMappingURL=302.fffb2288.js.map
