@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkgithub_io_vue"]=self["webpackChunkgithub_io_vue"]||[]).push([[687],{3687:function(n,o,e){e.r(o),e.d(o,{default:function(){return h}});var t=e(3396);const u=(0,t._)("h1",null,"This is a momo page",-1),i=(0,t._)("a",{href:"http://momo.town"},"Momo",-1);function r(n,o,e,r,a,s){return(0,t.wg)(),(0,t.iD)(t.HY,null,[u,i],64)}var a=(0,t.aZ)({name:"MomoView",components:{}}),s=e(89);const c=(0,s.Z)(a,[["render",r]]);var h=c}}]);
+//# sourceMappingURL=687.266d3f59.js.map

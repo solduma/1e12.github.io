@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkgithub_io_vue"]=self["webpackChunkgithub_io_vue"]||[]).push([[44],{2044:function(e,n,u){u.r(n),u.d(n,{default:function(){return o}});var t=u(3396);function r(e,n,u,r,i,a){return(0,t.wg)(),(0,t.iD)("h1",null,"This is a project page")}var i=(0,t.aZ)({name:"ProjectView",components:{}}),a=u(89);const c=(0,a.Z)(i,[["render",r]]);var o=c}}]);
+//# sourceMappingURL=44.98bf2cce.js.map
