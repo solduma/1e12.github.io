@@ -35,13 +35,14 @@
         <li>
           <b>EY CONSULTING – SENIOR CONSULTANT, DATA &amp; ANALYTICS</b>
         </li>
-        <li>Emart – Demand Forecasting</li>
-        <li>NH Investment and Securities – Personalized Product and Service</li>
-        <li>
-          Samsung Electronics – Semi-Realtime Monitoring of Global Sellouts
-        </li>
+        <li>Samsung Electronics – Development of E2E Global Sellouts Management Solution</li>
+        <li>Samsung Electronics – SARIMAX Forecasting on Flagship Sellout</li>
         <li>Samsung Electronics – GIS Analysis for Market Expansion</li>
-        <li>Samsung Electronics – Semi-Realtime Dashboard for SCM</li>
+        <li>Samsung Electronics – Survival Analysis on Active Devices</li>
+        <li>Samsung Electronics – Optimization of Salesforce Staffing</li>
+        <li>Samsung Electronics – Semi-Realtime Monitoring of the SCM</li>
+        <li>NH Investment and Securities – Personalized Product and Service</li>
+        <li>Emart – Demand Forecasting of Fresh Foods</li>
       </ul>
     </div>
     <div class="aboutWrapper" :style="style">
@@ -51,7 +52,7 @@
       <ul>
         <li><b>HANWHA CHEMICAL CO. – MANAGER, FIANCIAL ACCOUNTING</b></li>
         <li>Automation of Financial Statement Disclosure</li>
-        <li>Development of Fair-value Monitoring System</li>
+        <li>Development of Fair-value Assessment System</li>
       </ul>
     </div>
     <div class="aboutWrapper" :style="style">
@@ -182,6 +183,12 @@
             alt="Spotfire Badge"
           />
         </li>
+        <li>
+          <img
+            src="https://img.shields.io/badge/-D3.js-F9A03C?logo=d3.js&logoColor=white&style=for-the-badge&style=flat"
+            alt="D3.js Badge"
+          />
+        </li>
       </ul>
     </div>
     <div class="skillWrapper" :style="style">
@@ -248,6 +255,12 @@
           <img
             src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white&style=flat"
             alt="MariaDB Badge"
+          />
+        </li>
+        <li>
+          <img
+            src="https://img.shields.io/badge/-Hive-FDEE21?logo=apache-hive&logoColor=white&style=for-the-badge&style=flat"
+            alt="Hive Badge"
           />
         </li>
       </ul>
@@ -343,6 +356,24 @@
             alt="AWS Badge"
           />
         </li>
+        <li>
+          <img
+            src="https://img.shields.io/badge/-Spark-E25A1C?logo=apache-spark&logoColor=white&style=for-the-badge&style=flat"
+            alt="Spark Badge"
+          />
+        </li>
+        <li>
+          <img
+            src="https://img.shields.io/badge/-Hadoop-66CCFF?logo=apache-hadoop&logoColor=white&style=for-the-badge&style=flat"
+            alt="Hadoop Badge"
+          />
+        </li>
+        <li>
+          <img
+            src="https://img.shields.io/badge/-qgis-589632?logo=qgis&logoColor=white&style=for-the-badge&style=flat"
+            alt="Qgis Badge"
+          />
+        </li>
       </ul>
     </div>
   </div>
@@ -356,15 +387,14 @@ export default defineComponent({
     isOnMobile: [Boolean, Object],
   },
   computed: {
-    style () {
-      return 'display: ' + (this.isOnMobile ? 'block': 'flex');
-    }
+    style() {
+      return "display: " + (this.isOnMobile ? "block" : "flex");
+    },
   },
 });
 </script>
 
 <style scoped lang="scss">
-
 h2 {
   height: 32px;
 }
