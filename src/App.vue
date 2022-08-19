@@ -25,6 +25,7 @@ export default {
   data() {
     return {
       isOnMobile: false,
+      basename: "/",
     };
   },
   mounted () {
