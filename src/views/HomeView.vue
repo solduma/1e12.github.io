@@ -12,13 +12,13 @@
     <br>
     <hr />
     <div id="contacts">
-      <a href="https://github.com/solduma/"
+      <a href="https://github.com/solduma/" aria-label="github"
         ><font-awesome-icon icon="fa-brands fa-github" size="2x"
       /></a>
-      <a href="https://www.linkedin.com/in/il-jo-yoo-58034720/"
+      <a href="https://www.linkedin.com/in/il-jo-yoo-58034720/" aria-label="LinkedIn"
         ><font-awesome-icon icon="fa-brands fa-linkedin" size="2x"
       /></a>
-      <a href="mailto: iljo.joseph.yoo@gmail.com"
+      <a href="mailto: iljo.joseph.yoo@gmail.com" aria-label="Email"
         ><font-awesome-icon icon="fa-solid fa-envelope" size="2x"
       /></a>
     </div>
