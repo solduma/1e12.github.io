@@ -24,7 +24,7 @@
         <div v-else>ML Stuffs</div></router-link
       >
       <router-link to="momo"
-        ><div v-if="isOnMobile"><img src="./assets/img/momo.png" /></div>
+        ><div v-if="isOnMobile"><img src="./assets/img/momo.png" alt="Momo Img"/></div>
         <div v-else>Momo?</div></router-link
       >
     </nav>
