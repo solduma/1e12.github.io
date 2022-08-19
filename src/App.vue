@@ -4,7 +4,7 @@
       <a href="/"><img src="./assets/img/logo.png" alt="Main Logo" /></a>
     </h1>
     <nav>
-      <h2 class="hide">This is a nav area</h2>
+      <h2 class="hide">This is a nav area!</h2>
       <router-link to="about"><div v-if="isOnMobile"><font-awesome-icon icon="fa-solid fa-user" size="lg" /></div><div v-else>About Me</div></router-link>
       <router-link to="project"><div v-if="isOnMobile"><font-awesome-icon icon="fa-solid fa-briefcase" size="lg" /></div><div v-else>Past Projects</div></router-link>
       <router-link to="blog"><div v-if="isOnMobile"><font-awesome-icon icon="fa-solid fa-chart-column" size="lg" /></div><div v-else>ML Stuffs</div></router-link>
