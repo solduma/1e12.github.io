@@ -4,27 +4,34 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [16.x]
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      # 1. Repo Checkout
+      - name: Checkout source code
+        uses: actions/checkout@main
+      # 2. node.js Env Setup
+      - name: Set up Node.js
+        uses: actions/setup-node@main
         with:
-          node-version: ${{ matrix.node-version }}
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-      - run: |
-          rm -rf dist
-          npm ci
-          npm run build --if-present
-          git config --global init.defaultBranch main
-          git config --global user.email "iljo.joseph.yoo@gmail.com"
-          git config --global user.name "solduma"
-          cd dist
-          git init
-          git add -A
-          git commit -m 'deploy'
-          git push -f https://${{ secrets.GITHUB_TOKEN }}@github.com/solduma/solduma.github.io.git main:gh-pages
+          node-version: 16.x
+      # 3. Package Installation
+      - name: Install dependencies
+        run: npm install
+      # 4. Test
+      - name: Test unit
+        run: npm run test:unit
+      # 5. Build
+      - name: Build Page
+        run: npm run build
+        env:
+          NODE_ENV: production
+      # 6. Deploy
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
