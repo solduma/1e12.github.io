@@ -1,4 +1,755 @@
-<!DOCTYPE html><html lang="en"><head><script defer="defer" src="/js/chunk-vendors.bda991f0.js"></script><script defer="defer" src="/js/app.6d6bef53.js"></script><link href="/css/app.381c11da.css" rel="stylesheet"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>Il Jo Yoo | ML Engineer</title><script>// Single Page Apps for GitHub Pages
+<!DOCTYPE html><html lang="en"><head><script defer="defer" src="/js/chunk-vendors.bda991f0.js"></script><script defer="defer" src="/js/app.8a3be74b.js"></script><style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Thin";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  -webkit-transform: scale(var(--fa-counter-scale, 0.25));
+          transform: scale(var(--fa-counter-scale, 0.25));
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(var(--fa-li-width, 2em) * -1);
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  -webkit-animation-name: fa-beat;
+          animation-name: fa-beat;
+  -webkit-animation-delay: var(--fa-animation-delay, 0);
+          animation-delay: var(--fa-animation-delay, 0);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  -webkit-animation-name: fa-bounce;
+          animation-name: fa-bounce;
+  -webkit-animation-delay: var(--fa-animation-delay, 0);
+          animation-delay: var(--fa-animation-delay, 0);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  -webkit-animation-name: fa-fade;
+          animation-name: fa-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0);
+          animation-delay: var(--fa-animation-delay, 0);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  -webkit-animation-name: fa-beat-fade;
+          animation-name: fa-beat-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0);
+          animation-delay: var(--fa-animation-delay, 0);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  -webkit-animation-name: fa-flip;
+          animation-name: fa-flip;
+  -webkit-animation-delay: var(--fa-animation-delay, 0);
+          animation-delay: var(--fa-animation-delay, 0);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  -webkit-animation-name: fa-shake;
+          animation-name: fa-shake;
+  -webkit-animation-delay: var(--fa-animation-delay, 0);
+          animation-delay: var(--fa-animation-delay, 0);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+          animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-delay: var(--fa-animation-delay, 0);
+          animation-delay: var(--fa-animation-delay, 0);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 2s);
+          animation-duration: var(--fa-animation-duration, 2s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+          animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, steps(8));
+          animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    -webkit-animation-delay: -1ms;
+            animation-delay: -1ms;
+    -webkit-animation-duration: 1ms;
+            animation-duration: 1ms;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    transition-delay: 0s;
+    transition-duration: 0s;
+  }
+}
+@-webkit-keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@-webkit-keyframes fa-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@-webkit-keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@-webkit-keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@-webkit-keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@-webkit-keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+  }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg);
+  }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+  }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg);
+  }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  -webkit-transform: rotate(var(--fa-rotate-angle, none));
+          transform: rotate(var(--fa-rotate-angle, none));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.fad.fa-inverse,
+.fa-duotone.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}</style><link href="/css/app.22edde24.css" rel="stylesheet"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>Il Jo Yoo | ML Engineer</title><script>// Single Page Apps for GitHub Pages
       // MIT License
       // https://github.com/rafgraph/spa-github-pages
       // This script checks to see if a redirect is present in the query string,
@@ -17,4 +768,4 @@
               l.pathname.slice(0, -1) + decoded + l.hash
           );
         }
-      }(window.location))</script><link rel="stylesheet" type="text/css" href="/css/350.c22e9efa.css"></head><body><noscript><strong>We're sorry but github.io.vue doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app" data-v-app=""><header><h1><a href="/"><img src="/img/logo.c99686ce.png" alt="Main Logo"></a></h1><nav><h2 class="hide">This is a nav area!</h2><a href="/about" class="router-link-active router-link-exact-active" aria-current="page"><div>About Me</div></a><a href="/project" class=""><div>Past Projects</div></a><a href="/blog" class=""><div>ML Stuffs</div></a><a href="/momo" class=""><div>Momo?</div></a></nav></header><div id="wrapper"><main><h2 class="hide">This is a main area</h2><div class="viewWrapper" data-v-48742496=""><h2 data-v-48742496="">Education</h2><div class="aboutWrapper" data-v-48742496="" style="display: flex;"><a href="/" data-v-48742496=""><img src="/img/chief.4d2ee022.png" alt="Illinois Chief Logo" data-v-48742496=""></a><ul data-v-48742496=""><li data-v-48742496=""><b data-v-48742496="">University of Illinois at Urbana-Champaign</b></li><br data-v-48742496=""><li data-v-48742496="">M.C.S. in Data Science</li><li data-v-48742496="">B.Sc. in Accountancy (Honor)</li><li data-v-48742496="">B.Sc. in Finance (Honor)</li><li data-v-48742496="">Minor in Computer Science</li></ul></div><hr data-v-48742496=""><br data-v-48742496=""><h2 data-v-48742496="">Employment</h2><div class="aboutWrapper" data-v-48742496="" style="display: flex;"><ul data-v-48742496=""><li data-v-48742496="">2021-Current</li></ul><ul data-v-48742496=""><li data-v-48742496=""><b data-v-48742496="">HYUNDAI CAPITAL SERVICES – SENIOR DATA SCIENTIST </b></li><li data-v-48742496="">GTM-GA4-BigQuery Implementation</li><li data-v-48742496="">Recommender System for Banner Ads on 3rd-Party Sites</li></ul></div><div class="aboutWrapper" data-v-48742496="" style="display: flex;"><ul data-v-48742496=""><li data-v-48742496="">2017-2021</li></ul><ul data-v-48742496=""><li data-v-48742496=""><b data-v-48742496="">EY CONSULTING – SENIOR CONSULTANT, DATA &amp; ANALYTICS</b></li><li data-v-48742496="">Samsung Electronics – Development of E2E Global Sellouts Management Solution</li><li data-v-48742496="">Samsung Electronics – SARIMAX Forecasting on Flagship Sellout</li><li data-v-48742496="">Samsung Electronics – GIS Analysis for Market Expansion</li><li data-v-48742496="">Samsung Electronics – Survival Analysis on Active Devices</li><li data-v-48742496="">Samsung Electronics – Optimization of Salesforce Staffing</li><li data-v-48742496="">Samsung Electronics – Semi-Realtime Monitoring of the SCM</li><li data-v-48742496="">NH Investment and Securities – Personalized Product and Service</li><li data-v-48742496="">Emart – Demand Forecasting of Fresh Foods</li></ul></div><div class="aboutWrapper" data-v-48742496="" style="display: flex;"><ul data-v-48742496=""><li data-v-48742496="">2014-2017</li></ul><ul data-v-48742496=""><li data-v-48742496=""><b data-v-48742496="">HANWHA CHEMICAL CO. – MANAGER, FIANCIAL ACCOUNTING</b></li><li data-v-48742496="">Automation of Financial Statement Disclosure</li><li data-v-48742496="">Development of Fair-value Assessment System</li></ul></div><div class="aboutWrapper" data-v-48742496="" style="display: flex;"><ul data-v-48742496=""><li data-v-48742496="">2012-2013</li></ul><ul data-v-48742496=""><li data-v-48742496=""><b data-v-48742496="">GREEN LIGHT TRADING LLC – HIGH-FREQUENCY TRADER</b></li><li data-v-48742496="">Data Mining of Trading Log</li><li data-v-48742496="">Hyperparameter Tuning for HFT System</li></ul></div><hr data-v-48742496=""><br data-v-48742496=""><h2 data-v-48742496="">Skills</h2><div class="skillWrapper" data-v-48742496="" style="display: flex;"><ul data-v-48742496=""><li data-v-48742496=""><b data-v-48742496="">Languages</b></li></ul><ul data-v-48742496=""><li data-v-48742496=""><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&amp;logo=python&amp;logoColor=ffdd54&amp;style=flat" alt="Python Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&amp;logo=java&amp;logoColor=white&amp;style=flat" alt="Java Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&amp;logo=r&amp;logoColor=white&amp;style=flat" alt="R Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&amp;logo=c-sharp&amp;logoColor=white&amp;style=flat" alt="C# Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&amp;logo=javascript&amp;logoColor=%23F7DF1E&amp;style=flat" alt="Javascript Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&amp;logo=gnu-bash&amp;logoColor=white&amp;style=flat" alt="Shell Script Badge" data-v-48742496=""></li></ul></div><div class="skillWrapper" data-v-48742496="" style="display: flex;"><ul data-v-48742496=""><li data-v-48742496=""><b data-v-48742496="">ML/DL</b></li></ul><ul data-v-48742496=""><li data-v-48742496=""><img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&amp;logo=numpy&amp;logoColor=white&amp;style=flat" alt="Numpy Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&amp;logo=pandas&amp;logoColor=white&amp;style=flat" alt="Pandas Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&amp;logo=scikit-learn&amp;logoColor=white&amp;style=flat" alt="Scikit-Learn Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&amp;logo=scipy&amp;logoColor=%white&amp;style=flat" alt="Scipy Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&amp;logo=TensorFlow&amp;logoColor=white&amp;style=flat" alt="Tensorflow Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&amp;logo=Keras&amp;logoColor=white&amp;style=flat" alt="Keras Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&amp;logo=numpy&amp;logoColor=blue&amp;style=flat" alt="MLFlow Badge" data-v-48742496=""></li></ul></div><div class="skillWrapper" data-v-48742496="" style="display: flex;"><ul data-v-48742496=""><li data-v-48742496=""><b data-v-48742496="">Visualization</b></li></ul><ul data-v-48742496=""><li data-v-48742496=""><img src="https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&amp;logo=plotly&amp;logoColor=white&amp;style=flat" alt="Plotly Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/-Tableau-E97627?logo=tableau&amp;logoColor=white&amp;style=flat" alt="Tableau Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/-Spotfire-40AEF0?logo=spotfire&amp;logoColor=white&amp;style=flat" alt="Spotfire Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/-D3.js-F9A03C?logo=d3.js&amp;logoColor=white&amp;style=for-the-badge&amp;style=flat" alt="D3.js Badge" data-v-48742496=""></li></ul></div><div class="skillWrapper" data-v-48742496="" style="display: flex;"><ul data-v-48742496=""><li data-v-48742496=""><b data-v-48742496="">WebDev</b></li></ul><ul data-v-48742496=""><li data-v-48742496=""><img src="https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&amp;logo=vuedotjs&amp;logoColor=%234FC08D&amp;style=flat" alt="Vue Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&amp;logo=express&amp;logoColor=%2361DAFB&amp;style=flat" alt="Express Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&amp;logo=node.js&amp;logoColor=white&amp;style=flat" alt="Node Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&amp;logo=flask&amp;logoColor=white&amp;style=flat" alt="Flask Badge" data-v-48742496=""></li></ul></div><div class="skillWrapper" data-v-48742496="" style="display: flex;"><ul data-v-48742496=""><li data-v-48742496=""><b data-v-48742496="">SQL</b></li></ul><ul data-v-48742496=""><li data-v-48742496=""><img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&amp;logo=postgresql&amp;logoColor=white&amp;style=flat" alt="Postgres SQL Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&amp;logo=oracle&amp;logoColor=white&amp;style=flat" alt="Oracle Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&amp;logo=mysql&amp;logoColor=white&amp;style=flat" alt="MySQL Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&amp;logo=sqlite&amp;logoColor=white&amp;style=flat" alt="SQLite Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&amp;logo=mariadb&amp;logoColor=white&amp;style=flat" alt="MariaDB Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/-Hive-FDEE21?logo=apache-hive&amp;logoColor=white&amp;style=for-the-badge&amp;style=flat" alt="Hive Badge" data-v-48742496=""></li></ul></div><div class="skillWrapper" data-v-48742496="" style="display: flex;"><ul data-v-48742496=""><li data-v-48742496=""><b data-v-48742496="">NoSQL</b></li></ul><ul data-v-48742496=""><li data-v-48742496=""><img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&amp;logo=mongodb&amp;logoColor=white&amp;style=flat" alt="MongoDB Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/-ElasticSearch-005571?style=for-the-badge&amp;logo=elasticsearch&amp;style=flat" alt="ElasticSearch Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/BigQuery-%234285F4.svg?style=for-the-badge&amp;logo=google-cloud&amp;logoColor=white&amp;style=flat" alt="BigQuery Badge" data-v-48742496=""></li></ul></div><div class="skillWrapper" data-v-48742496="" style="display: flex;"><ul data-v-48742496=""><li data-v-48742496=""><b data-v-48742496="">CI/CD</b></li></ul><ul data-v-48742496=""><li data-v-48742496=""><img src="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&amp;logo=githubactions&amp;logoColor=white&amp;style=flat" alt="Github Action Badge" data-v-48742496=""></li></ul></div><div class="skillWrapper" data-v-48742496="" style="display: flex;"><ul data-v-48742496=""><li data-v-48742496=""><b data-v-48742496="">Etc.</b></li></ul><ul data-v-48742496=""><li data-v-48742496=""><img src="https://img.shields.io/badge/-GA4-61DAFB?logo=google-analytics&amp;logoColor=white&amp;style=flat" alt="GA4 Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/-GTM-246FDB?logo=google-tag-manager&amp;logoColor=white&amp;style=flat" alt="GTM Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&amp;logo=docker&amp;logoColor=white&amp;style=flat" alt="Docker Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&amp;logo=jira&amp;logoColor=white&amp;style=flat" alt="JIRA Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&amp;logo=swagger&amp;logoColor=white&amp;style=flat" alt="Swagger Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&amp;logo=selenium&amp;logoColor=white&amp;style=flat" alt="Selenium Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&amp;logo=github&amp;logoColor=white&amp;style=flat" alt="Github Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&amp;logo=amazon-aws&amp;logoColor=white&amp;style=flat" alt="AWS Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/-Spark-E25A1C?logo=apache-spark&amp;logoColor=white&amp;style=for-the-badge&amp;style=flat" alt="Spark Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/-Hadoop-66CCFF?logo=apache-hadoop&amp;logoColor=white&amp;style=for-the-badge&amp;style=flat" alt="Hadoop Badge" data-v-48742496=""></li><li data-v-48742496=""><img src="https://img.shields.io/badge/-qgis-589632?logo=qgis&amp;logoColor=white&amp;style=for-the-badge&amp;style=flat" alt="Qgis Badge" data-v-48742496=""></li></ul></div></div></main></div></div></body></html>
+      }(window.location))</script><link rel="stylesheet" type="text/css" href="/css/38.a2dbc6a0.css"></head><body><noscript><strong>We're sorry but github.io.vue doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app" data-v-app=""><header><h1><a href="/"><img src="/img/logo.c99686ce.png" alt="Main Logo"></a></h1><nav><h2 class="hide">This is a nav area!</h2><a href="/about" class="router-link-active router-link-exact-active" aria-current="page"><div>About Me</div></a><a href="/project" class=""><div>Past Projects</div></a><a href="/blog" class=""><div>ML Stuffs</div></a><a href="/momo" class=""><div>Momo?</div></a></nav></header><div id="wrapper"><main><h2 class="hide">This is a main area</h2><div class="viewWrapper"><h2 data-v-3c2f1808="">Education</h2><br data-v-3c2f1808=""><div class="aboutWrapper" data-v-3c2f1808="" style="display: flex;"><a href="/" data-v-3c2f1808=""><img src="/img/chief.4d2ee022.png" alt="Illinois Chief Logo" data-v-3c2f1808=""></a><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><b data-v-3c2f1808="">University of Illinois at Urbana-Champaign</b></li><br data-v-3c2f1808=""><li data-v-3c2f1808="">M.C.S. in Data Science</li><li data-v-3c2f1808="">B.Sc. in Accountancy (Honor)</li><li data-v-3c2f1808="">B.Sc. in Finance (Honor)</li><li data-v-3c2f1808="">Minor in Computer Science</li></ul></div><br data-v-3c2f1808=""><hr data-v-3c2f1808=""><br data-v-3c2f1808=""><h2 data-v-3c2f1808="">Employment</h2><br data-v-3c2f1808=""><div class="aboutWrapper" data-v-3c2f1808="" style="display: flex;"><ul data-v-3c2f1808=""><li data-v-3c2f1808="">2021-Current</li></ul><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><b data-v-3c2f1808="">HYUNDAI CAPITAL SERVICES – SENIOR DATA SCIENTIST </b></li><li data-v-3c2f1808="">GTM-GA4-BigQuery Implementation</li><li data-v-3c2f1808="">Recommender System for Banner Ads on 3rd-Party Sites</li></ul></div><div class="aboutWrapper" data-v-3c2f1808="" style="display: flex;"><ul data-v-3c2f1808=""><li data-v-3c2f1808="">2017-2021</li></ul><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><b data-v-3c2f1808="">EY CONSULTING – SENIOR CONSULTANT, DATA &amp; ANALYTICS</b></li><li data-v-3c2f1808=""> Samsung Electronics – Development of E2E Global Sellouts Management Solution </li><li data-v-3c2f1808="">Samsung Electronics – SARIMAX Forecasting on Flagship Sellout</li><li data-v-3c2f1808="">Samsung Electronics – GIS Analysis for Market Expansion</li><li data-v-3c2f1808="">Samsung Electronics – Survival Analysis on Active Devices</li><li data-v-3c2f1808="">Samsung Electronics – Optimization of Salesforce Staffing</li><li data-v-3c2f1808="">Samsung Electronics – Semi-Realtime Monitoring of the SCM</li><li data-v-3c2f1808="">NH Investment and Securities – Personalized Product and Service</li><li data-v-3c2f1808="">Emart – Demand Forecasting of Fresh Foods</li></ul></div><div class="aboutWrapper" data-v-3c2f1808="" style="display: flex;"><ul data-v-3c2f1808=""><li data-v-3c2f1808="">2014-2017</li></ul><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><b data-v-3c2f1808="">HANWHA CHEMICAL CO. – MANAGER, FIANCIAL ACCOUNTING</b></li><li data-v-3c2f1808="">Automation of Financial Statement Disclosure</li><li data-v-3c2f1808="">Development of Fair-value Assessment System</li></ul></div><div class="aboutWrapper" data-v-3c2f1808="" style="display: flex;"><ul data-v-3c2f1808=""><li data-v-3c2f1808="">2012-2013</li></ul><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><b data-v-3c2f1808="">GREEN LIGHT TRADING LLC – HIGH-FREQUENCY TRADER</b></li><li data-v-3c2f1808="">Data Mining of Trading Log</li><li data-v-3c2f1808="">Hyperparameter Tuning for HFT System</li></ul></div><br data-v-3c2f1808=""><hr data-v-3c2f1808=""><br data-v-3c2f1808=""><h2 data-v-3c2f1808="">Skills</h2><br data-v-3c2f1808=""><div class="skillWrapper" data-v-3c2f1808="" style="display: flex;"><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><b data-v-3c2f1808="">Languages</b></li></ul><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&amp;logo=python&amp;logoColor=ffdd54&amp;style=flat" alt="Python Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&amp;logo=java&amp;logoColor=white&amp;style=flat" alt="Java Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&amp;logo=r&amp;logoColor=white&amp;style=flat" alt="R Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&amp;logo=c-sharp&amp;logoColor=white&amp;style=flat" alt="C# Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&amp;logo=javascript&amp;logoColor=%23F7DF1E&amp;style=flat" alt="Javascript Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&amp;logo=gnu-bash&amp;logoColor=white&amp;style=flat" alt="Shell Script Badge" data-v-3c2f1808=""></li></ul></div><div class="skillWrapper" data-v-3c2f1808="" style="display: flex;"><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><b data-v-3c2f1808="">ML/DL</b></li></ul><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&amp;logo=numpy&amp;logoColor=white&amp;style=flat" alt="Numpy Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&amp;logo=pandas&amp;logoColor=white&amp;style=flat" alt="Pandas Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&amp;logo=scikit-learn&amp;logoColor=white&amp;style=flat" alt="Scikit-Learn Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&amp;logo=scipy&amp;logoColor=%white&amp;style=flat" alt="Scipy Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&amp;logo=TensorFlow&amp;logoColor=white&amp;style=flat" alt="Tensorflow Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&amp;logo=Keras&amp;logoColor=white&amp;style=flat" alt="Keras Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&amp;logo=numpy&amp;logoColor=blue&amp;style=flat" alt="MLFlow Badge" data-v-3c2f1808=""></li></ul></div><div class="skillWrapper" data-v-3c2f1808="" style="display: flex;"><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><b data-v-3c2f1808="">Visualization</b></li></ul><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&amp;logo=plotly&amp;logoColor=white&amp;style=flat" alt="Plotly Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/-Tableau-E97627?logo=tableau&amp;logoColor=white&amp;style=flat" alt="Tableau Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/-Spotfire-40AEF0?logo=spotfire&amp;logoColor=white&amp;style=flat" alt="Spotfire Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/-D3.js-F9A03C?logo=d3.js&amp;logoColor=white&amp;style=for-the-badge&amp;style=flat" alt="D3.js Badge" data-v-3c2f1808=""></li></ul></div><div class="skillWrapper" data-v-3c2f1808="" style="display: flex;"><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><b data-v-3c2f1808="">WebDev</b></li></ul><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&amp;logo=vuedotjs&amp;logoColor=%234FC08D&amp;style=flat" alt="Vue Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&amp;logo=express&amp;logoColor=%2361DAFB&amp;style=flat" alt="Express Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&amp;logo=node.js&amp;logoColor=white&amp;style=flat" alt="Node Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&amp;logo=flask&amp;logoColor=white&amp;style=flat" alt="Flask Badge" data-v-3c2f1808=""></li></ul></div><div class="skillWrapper" data-v-3c2f1808="" style="display: flex;"><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><b data-v-3c2f1808="">SQL</b></li></ul><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&amp;logo=postgresql&amp;logoColor=white&amp;style=flat" alt="Postgres SQL Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&amp;logo=oracle&amp;logoColor=white&amp;style=flat" alt="Oracle Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&amp;logo=mysql&amp;logoColor=white&amp;style=flat" alt="MySQL Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&amp;logo=sqlite&amp;logoColor=white&amp;style=flat" alt="SQLite Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&amp;logo=mariadb&amp;logoColor=white&amp;style=flat" alt="MariaDB Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/-Hive-FDEE21?logo=apache-hive&amp;logoColor=white&amp;style=for-the-badge&amp;style=flat" alt="Hive Badge" data-v-3c2f1808=""></li></ul></div><div class="skillWrapper" data-v-3c2f1808="" style="display: flex;"><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><b data-v-3c2f1808="">NoSQL</b></li></ul><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&amp;logo=mongodb&amp;logoColor=white&amp;style=flat" alt="MongoDB Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/-ElasticSearch-005571?style=for-the-badge&amp;logo=elasticsearch&amp;style=flat" alt="ElasticSearch Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/BigQuery-%234285F4.svg?style=for-the-badge&amp;logo=google-cloud&amp;logoColor=white&amp;style=flat" alt="BigQuery Badge" data-v-3c2f1808=""></li></ul></div><div class="skillWrapper" data-v-3c2f1808="" style="display: flex;"><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><b data-v-3c2f1808="">CI/CD</b></li></ul><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&amp;logo=githubactions&amp;logoColor=white&amp;style=flat" alt="Github Action Badge" data-v-3c2f1808=""></li></ul></div><div class="skillWrapper" data-v-3c2f1808="" style="display: flex;"><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><b data-v-3c2f1808="">Etc.</b></li></ul><ul data-v-3c2f1808=""><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/-GA4-61DAFB?logo=google-analytics&amp;logoColor=white&amp;style=flat" alt="GA4 Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/-GTM-246FDB?logo=google-tag-manager&amp;logoColor=white&amp;style=flat" alt="GTM Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&amp;logo=docker&amp;logoColor=white&amp;style=flat" alt="Docker Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&amp;logo=jira&amp;logoColor=white&amp;style=flat" alt="JIRA Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&amp;logo=swagger&amp;logoColor=white&amp;style=flat" alt="Swagger Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&amp;logo=selenium&amp;logoColor=white&amp;style=flat" alt="Selenium Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&amp;logo=github&amp;logoColor=white&amp;style=flat" alt="Github Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&amp;logo=amazon-aws&amp;logoColor=white&amp;style=flat" alt="AWS Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/-Spark-E25A1C?logo=apache-spark&amp;logoColor=white&amp;style=for-the-badge&amp;style=flat" alt="Spark Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/-Hadoop-66CCFF?logo=apache-hadoop&amp;logoColor=white&amp;style=for-the-badge&amp;style=flat" alt="Hadoop Badge" data-v-3c2f1808=""></li><li data-v-3c2f1808=""><img src="https://img.shields.io/badge/-qgis-589632?logo=qgis&amp;logoColor=white&amp;style=for-the-badge&amp;style=flat" alt="Qgis Badge" data-v-3c2f1808=""></li></ul></div></div><br><hr><br><div id="contacts"><a href="https://github.com/solduma/" aria-label="github"><svg class="svg-inline--fa fa-github fa-2x" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path class="" fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a><a href="https://www.linkedin.com/in/il-jo-yoo-58034720/" aria-label="LinkedIn"><svg class="svg-inline--fa fa-linkedin fa-2x" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path class="" fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a><a href="mailto: iljo.joseph.yoo@gmail.com" aria-label="Email"><svg class="svg-inline--fa fa-envelope fa-2x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path class="" fill="currentColor" d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"></path></svg></a></div></main></div></div></body></html>
