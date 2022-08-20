@@ -24,7 +24,9 @@
         <div v-else>ML Stuffs</div></router-link
       >
       <router-link to="momo"
-        ><div v-if="isOnMobile"><img src="./assets/img/momo.png" alt="Momo Img"/></div>
+        ><div v-if="isOnMobile">
+          <img src="./assets/img/momo.png" alt="Momo Img" />
+        </div>
         <div v-else>Momo?</div></router-link
       >
     </nav>
@@ -32,7 +34,25 @@
   <div id="wrapper">
     <main>
       <h2 class="hide">This is a main area</h2>
-      <router-view :isOnMobile="isOnMobile" />
+      <div class="viewWrapper">
+        <router-view :isOnMobile="isOnMobile" />
+      </div>
+      <br />
+      <hr />
+      <br />
+      <div id="contacts">
+        <a href="https://github.com/solduma/" aria-label="github"
+          ><font-awesome-icon icon="fa-brands fa-github" size="2x"
+        /></a>
+        <a
+          href="https://www.linkedin.com/in/il-jo-yoo-58034720/"
+          aria-label="LinkedIn"
+          ><font-awesome-icon icon="fa-brands fa-linkedin" size="2x"
+        /></a>
+        <a href="mailto: iljo.joseph.yoo@gmail.com" aria-label="Email"
+          ><font-awesome-icon icon="fa-solid fa-envelope" size="2x"
+        /></a>
+      </div>
     </main>
   </div>
 </template>
@@ -166,13 +186,15 @@ nav a:last-child {
 
 main {
   flex-basis: 940px;
-  padding: 40px 0px 0px 0px;
+  padding: 40px 32px 0px 32px;
   box-shadow: 0px 0px 2px rgba(141, 141, 141, 0.5);
   background-color: $Background;
 }
+
 .viewWrapper {
-  padding: 32px;
+  padding: 32px 0px 0px 0px;
 }
+
 #wrapper h1 {
   position: flex;
   justify-content: center;
@@ -183,5 +205,19 @@ main {
   font-size: 50px;
   color: $BumbleBeeYellow;
   text-shadow: -1px 0 #ffc72b, 0 1px #ffc72b, 1px 0 #ffc72b, 0 -1px #ffc72b;
+}
+
+ul > li {
+  display: flex;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#contacts > a {
+  color: $BumbleBeeYellow;
+  position: relative;
+  margin-right: 5px;
 }
 </style>

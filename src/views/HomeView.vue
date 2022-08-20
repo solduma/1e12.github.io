@@ -1,28 +1,13 @@
 <template>
-  <div class="viewWrapper">
-    <h1>Il Jo Yoo</h1>
-    <p>
-      I'm a Senior Data Scientist at Hyundai Capital, and a Co-Founder of
-      <a href="https://momo.town">Momo</a>. <br />
-      I write about Programming, Data Science, MLOps, and Web Development in a
-      product perspective. <br />
-      All views are my own.<br />
-      Feel free to contact me with anything via following channels. <br />
-    </p>
-    <br>
-    <hr />
-    <div id="contacts">
-      <a href="https://github.com/solduma/" aria-label="github"
-        ><font-awesome-icon icon="fa-brands fa-github" size="2x"
-      /></a>
-      <a href="https://www.linkedin.com/in/il-jo-yoo-58034720/" aria-label="LinkedIn"
-        ><font-awesome-icon icon="fa-brands fa-linkedin" size="2x"
-      /></a>
-      <a href="mailto: iljo.joseph.yoo@gmail.com" aria-label="Email"
-        ><font-awesome-icon icon="fa-solid fa-envelope" size="2x"
-      /></a>
-    </div>
-  </div>
+  <h1>Il Jo Yoo</h1>
+  <p>
+    I'm a Senior Data Scientist at Hyundai Capital, and a Co-Founder of
+    <a href="https://momo.town">Momo</a>. <br />
+    I write about Programming, Data Science, MLOps, and Web Development in a
+    product perspective. <br />
+    All views are my own.<br />
+    Feel free to contact me with anything via following channels. <br />
+  </p>
 </template>
 
 <script lang="ts">
@@ -49,9 +34,4 @@ a {
   text-decoration: none;
 }
 
-#contacts > a {
-  color: $BumbleBeeYellow;
-  position: relative;
-  margin-right: 5px;
-}
 </style>

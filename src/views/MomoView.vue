@@ -5,6 +5,12 @@
         ><img src="../assets/img/momologo.png" alt="Momo Link"
       /></a>
     </h1>
+    <p>
+      Momo aims to become the greatest Mobility Community someday. <br />
+      It's still on a pre-launch state, but you can sign-up, post your ideas, or share funny memes. <br/>
+      I intend to keep a Dev Journal on this page, so I can share my exprience of full-stack web and DevOps development. <br/>
+      Any thoughts are welcome, especially if you are interested in joining the team Momo.
+    </p>
   </div>
 </template>
 
